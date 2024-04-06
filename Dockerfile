@@ -16,7 +16,7 @@ RUN apt install -y lsb-release
 RUN apt install -y curl
 RUN apt install -y ca-certificates
 RUN apt remove -y cmdtest
-RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg --output pubkey.gpg
+RUN curl -sSL https://dl.yarnpkg.com/debian/pubkey.gpg --output pubkey.gpg
 RUN apt-key add pubkey.gpg
 
 RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" > /etc/apt/sources.list.d/yarn.list
